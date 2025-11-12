@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 
 app = FastAPI()
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 # -----------------------------
 # Helper: Improve and structure the input prompt
@@ -469,6 +469,63 @@ async def home():
                 transform: translateY(-2px);
             }
 
+            /* Footer Styles */
+            footer {
+                margin-top: 60px;
+                padding: 30px 20px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 24px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                animation: fadeInUp 1s ease;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                color: white;
+            }
+
+            .footer-text {
+                font-size: 1.1em;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            }
+
+            .footer-name {
+                font-size: 1.3em;
+                font-weight: 700;
+                background: linear-gradient(45deg, #fff, #a78bfa, #fbbf24);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                letter-spacing: 1px;
+            }
+
+            .footer-heart {
+                display: inline-block;
+                color: #ef4444;
+                animation: heartbeat 1.5s ease-in-out infinite;
+                font-size: 1.2em;
+            }
+
+            @keyframes heartbeat {
+                0%, 100% { transform: scale(1); }
+                25% { transform: scale(1.1); }
+                50% { transform: scale(1); }
+            }
+
+            .footer-year {
+                font-size: 0.9em;
+                opacity: 0.85;
+            }
+
             @media (max-width: 1024px) {
                 .main-grid {
                     grid-template-columns: 1fr;
@@ -583,6 +640,16 @@ async def home():
                     <p>Generate professional prompts in seconds with AI power</p>
                 </div>
             </div>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-text">
+                        Built with <span class="footer-heart">❤️</span> by
+                    </div>
+                    <div class="footer-name">Vinita Pandla</div>
+                    <div class="footer-year">© 2025 AI Prompt Generator Pro</div>
+                </div>
+            </footer>
         </div>
 
         <script>
@@ -724,5 +791,5 @@ async def home():
     return HTMLResponse(content=html_content)
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="127.0.0.1", port=8000)
