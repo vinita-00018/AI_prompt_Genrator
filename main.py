@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 
 app = FastAPI()
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 # -----------------------------
 # Helper: Improve and structure the input prompt
@@ -793,4 +793,5 @@ async def home():
 
 # if __name__ == "__main__":
 #     uvicorn.run(app, host="127.0.0.1", port=8000)
+
 
