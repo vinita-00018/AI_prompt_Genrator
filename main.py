@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 
 app = FastAPI()
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 # -----------------------------
 # Helper: Improve and structure the input prompt
